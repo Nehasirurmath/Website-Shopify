@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sign Up</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href="SignUp.css">
+    <script>
+      function validate() {
+          if (document.myform.user.value == "") {
+              alert("Please Enter a Username");
+              document.myform.user.focus();
+              return false;
+          }
+
+          var emailId,dotpos,atpos;
+            emailId=document.myform.email.value;
+            atpos=emailId.indexOf("@");
+            dotpos=emailId.lastIndexOf(".");
+
+            if(dotpos-atpos<=2)
+            {
+                alert("Please enter a Valid Email");
+                return false;
+            }
+
+
+          if (document.myform.pass.value == "") {
+              alert("Please Enter a password");
+              document.myform.pass.focus();
+              return false;
+          }
+
+          if(document.myform.pass.value!= document.myform.cpass.value){
+              alert("Please enter correct Password");
+              return false;
+          }
+
+          
+
+          
+          return true;   
+     }  
+  </script>
+</head>
+<body>
+    <section class="vh-100 bg-image" ">
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+          <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                <div class="card" style="border-radius: 15px;">
+                  <div class="card-body p-5" align="center" >
+                    <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+                    <hr>
+      
+                    <form name="myform" onsubmit="return(validate())">
+      
+                      <div class="form-outline mb-4" >
+                        
+                        <label class="form-label" for="form3Example1cg" text-align="left" >Your Name:</label><br>
+                        <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="user" placeholder="Name" /><br><br>
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        
+                        <label class="form-label" for="form3Example3cg" >Your Email:</label><br>
+                        <input type="email" id="form3Example3cg" class="form-control form-control-lg" name="email" placeholder="Email"/><br><br>
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        
+                        <label class="form-label" for="form3Example4cg" >Password:</label><br>
+                        <input type="password" id="form3Example4cg" class="form-control form-control-lg" name="pass" placeholder="Password"/><br><br>
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                   
+                        <label class="form-label" for="form3Example4cdg" >Confirm password:</label><br>
+                        <input type="password" id="form3Example4cdg" class="form-control form-control-lg" name="cpass" placeholder=" Confirm Password"/><br><br>
+                      </div>
+      
+                      
+                       
+      
+                      <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-success">Register</button>
+                        
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                      </div>
+      
+                      <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="SignIn.html" class="fw-bold text-body"><u>Login here</u></a><br>
+                      go back to home page<a href="main.html">Click here</a></p>
+      
+                    </form>
+      
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+       
+    
+</body>
+</html>

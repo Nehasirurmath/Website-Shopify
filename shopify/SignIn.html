@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Shopify</title>
+  <link rel="icon" href="images/icon.png" type="image/x-con">
+  <script>
+    function validate() {
+      if (document.myform.user.value == "") {
+        alert("Please Enter a Username");
+        document.myform.user.focus();
+        return false;
+      }
+
+
+
+
+      if (document.myform.pass.value == "") {
+        alert("Please Enter a password");
+        document.myform.pass.focus();
+        return false;
+      }
+
+
+
+
+
+
+      return true;
+    }  
+  </script>
+</head>
+
+<body>
+
+
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <h2 class="text-uppercase text-center mb-5">Login to your Account</h2>
+      <hr>
+      <!-- Login Form -->
+      <form align="center" name="myform" onsubmit="return(validate())">
+        <label>Name:</label><br>
+        <input type="text" id="login" class="fadeIn second" name="user" placeholder="Name"><br><br>
+        <label>Passowrd:</label><br>
+        <input type="password" id="password" class="fadeIn third" name="pass" placeholder="password">
+        <br>  <br> 
+        
+        <button type="submit" class="btn btn-success">Login</button>
+        <p>go back to home page<a href="main.html"><u>Click here<u></a></p>
+      </form>
+
+      <!-- Remind Passowrd -->
+      <div id="formFooter" align="center">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
